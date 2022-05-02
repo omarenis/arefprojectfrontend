@@ -16,6 +16,7 @@ import { DynamicTableComponent } from './components/dynamic-table/dynamic-table.
 import { FooterComponent } from './components/footer/footer.component';
 import { LandingComponent } from './screens/public/landing/landing.component';
 import {RouterModule} from "@angular/router";
+import {AngularMultiSelectModule} from "angular2-multiselect-dropdown";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {RouterModule} from "@angular/router";
             registrationStrategy: 'registerWhenStable:30000'
         }),
         NgbModule,
-        RouterModule
+        RouterModule,
+        AngularMultiSelectModule
     ],
   providers: [],
   bootstrap: [AppComponent]
