@@ -1,0 +1,72 @@
+<nav [ngClass]="{'bg-white': isCollapsed}"
+     class="navbar navbar-expand-lg navbar-absolute">
+    <div class="container-fluid">
+        <div class="navbar-wrapper">
+            <a class="navbar-brand" id="navbar-brand" routerLink="/">
+                SentiDigital
+            </a>
+        </div>
+        <button (click)="collapse()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"
+                class="navbar-toggler" type="button">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+        </button>
+        <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse justify-content-end" id="collapseExample">
+            <ul class="navbar-nav">
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/dashboard']" class="nav-link">
+                        home
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/dashboard']" class="nav-link">
+                        about
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/dashboard']" class="nav-link">
+                        services
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/dashboard']" class="nav-link">
+                        portfolio
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/public/blogs']" class="nav-link">
+                        blog
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/public/pricing']" class="nav-link">
+                        Pricing
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/dashboard']" class="nav-link">
+                        contact
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/public/signup']" class="nav-link">
+                        <em class="now-ui-icons tech_mobile"></em> Register
+                    </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a [routerLink]="['/public/login']" class="nav-link">
+                        <em class="now-ui-icons users_circle-08"></em> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="wrapper wrapper-full-page">
+    <div #container [ngClass]="{'register-page': childRoutePath === 'signup',
+    'login-page': childRoutePath === 'signin',
+    '': this.childRoutePath !== 'signup' && this.childRoutePath !== 'signin'}" class="full-page section-image">
+        <router-outlet></router-outlet>
+    </div>
+</div>
