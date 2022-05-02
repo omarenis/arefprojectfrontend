@@ -33,7 +33,6 @@
             "styles": [
               "src/styles.css",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
-              "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/angular-archwizard/styles/archwizard.scss",
               "node_modules/angular2-multiselect-dropdown/themes/default.theme.css",
               "./src/assets/demo/demo.css",
@@ -42,7 +41,7 @@
               "node_modules/@swimlane/ngx-datatable/themes/bootstrap.scss",
               "node_modules/@swimlane/ngx-datatable/assets/icons.css",
               "./src/assets/scss/now-ui-dashboard.scss",
-              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/chart.js/dist/chart.min.js"
