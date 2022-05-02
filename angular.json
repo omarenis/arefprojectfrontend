@@ -34,7 +34,7 @@
               "src/styles.css",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "node_modules/angular-archwizard/archwizard.css",
+              "node_modules/angular-archwizard/styles/archwizard.scss",
               "node_modules/angular2-multiselect-dropdown/themes/default.theme.css",
               "./src/assets/demo/demo.css",
               "node_modules/sweetalert2/src/sweetalert2.scss",
@@ -46,8 +46,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/chart.js/dist/Chart.min.js",
-              "node_modules/fullcalendar/dist/fullcalendar.min.js"
+              "node_modules/chart.js/dist/chart.min.js"
             ],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
