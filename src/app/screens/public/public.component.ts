@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MessageService} from "../../services/message.service";
+// import {MessageService} from "../../services/message.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -11,16 +11,16 @@ export class PublicComponent implements OnInit {
     public childRoutePath !: string;
 
     // private listTitles !: any[];
-    constructor(private location: Location, private router: Router, private activeRoute: ActivatedRoute, private messageService: MessageService) {
+    constructor(private router: Router, private activeRoute: ActivatedRoute) {
     }
 
     ngOnInit(): void {
-        setTimeout(() => {
-            this.messageService.getMessage().subscribe(message => {
-                console.log(message);
-                this.childRoutePath = message;
-            });
-        }, 0);
+        // setTimeout(() => {
+        //     this.messageService.getMessage().subscribe(message => {
+        //         console.log(message);
+        //         this.childRoutePath = message;
+        //     });
+        // }, 0);
         const $page = document.getElementsByClassName('full-page')[0];
         const imageContainer = document.createElement('div');
         imageContainer.classList.add('full-page-background');

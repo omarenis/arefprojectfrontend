@@ -1,19 +1,14 @@
 <nav [ngClass]="{'bg-white': isCollapsed}"
-     class="navbar navbar-expand-lg navbar-absolute">
-    <div class="container-fluid">
+     class="navbar navbar-expand-lg navbar-absolute p-0">
+    <div class="container-fluid p-0">
         <div class="navbar-wrapper">
             <a class="navbar-brand" id="navbar-brand" routerLink="/">
                 SentiDigital
             </a>
         </div>
-        <button (click)="collapse()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"
-                class="navbar-toggler" type="button">
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-            <span class="navbar-toggler-bar navbar-kebab"></span>
-        </button>
-        <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse justify-content-end" id="collapseExample">
-            <ul class="navbar-nav">
+        <div [ngbCollapse]="!isCollapsed" class="collapse navbar-collapse justify-content-end"
+             id="collapseExample">
+            <ul class="navbar-nav justify-content-between">
                 <li class="nav-item" routerLinkActive="active">
                     <a [routerLink]="['/dashboard']" class="nav-link">
                         home
@@ -60,7 +55,54 @@
                     </a>
                 </li>
             </ul>
+            <!--            <ul class="navbar-nav">-->
+            <!--                <li class="nav-item m-0" routerLinkActive="active">-->
+            <!--                    <a [routerLink]="['/dashboard']" class="nav-link">-->
+            <!--                        home-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item m-0" routerLinkActive="active">-->
+            <!--                    <a [routerLink]="['/dashboard']" class="nav-link">-->
+            <!--                        about-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item m-0" routerLinkActive="active">-->
+            <!--                    <a [routerLink]="['/dashboard']" class="nav-link">-->
+            <!--                        services-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li class="nav-item m-0" routerLinkActive="active">-->
+            <!--                    <a [routerLink]="['/dashboard']" class="nav-link">-->
+            <!--                        portfolio-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
         </div>
+        <ul class="d-flex pull-right p-0">
+            <li class="">
+                <a class="btn btn-icon btn-link btn-neutral" href="https://twitter.com/CreativeTim" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-icon btn-neutral btn-link" href="https://www.facebook.com/CreativeTim"
+                   target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a class="btn btn-icon btn-neutral btn-link" href="https://www.instagram.com/CreativeTimOfficial"
+                   target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+        <button (click)="collapse()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample"
+                class="navbar-toggler" type="button">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+        </button>
     </div>
 </nav>
 <div class="wrapper wrapper-full-page">

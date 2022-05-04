@@ -1,0 +1,22 @@
+.custom-color-alert {
+    background-color: #08b312;
+}
+
+.btn-primary
+{
+    background: #4A08FF;
+}
+
+a
+{
+    color: #4A08FF;
+}
+.btn-link
+{
+    color: white;
+}
+.btn-link:hover
+{
+    background: white;
+    color: #4A08FF;
+}
